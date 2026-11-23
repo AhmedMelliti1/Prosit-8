@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Employe implements Comparable<Employe> {
     private int id;
     private String nom;
@@ -70,5 +72,16 @@ public class Employe implements Comparable<Employe> {
     @Override
     public int compareTo(Employe o) {
         return this.id - o.id;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (!(o instanceof Employe employe)) return false;
+        return id == employe.id;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(id);
     }
 }
