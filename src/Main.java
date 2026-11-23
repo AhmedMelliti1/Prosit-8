@@ -69,5 +69,17 @@ public class Main {
         System.out.println("\nTri By Id:");
 
         dh.trierDepartementsParId();
+
+        Employe e1 = new Employe(103, "Ben Ali", "Sami", "Dev", 3);
+        Employe e2 = new Employe(101, "Trabelsi", "Amira", "RH", 5);
+        Employe e3 = new Employe(105, "Mansour", "Youssef", "Analyste", 2);
+        Employe e4 = new Employe(102, "Khelifi", "Nour", "Comptable", 4);
+        AffectationHashMap affectations = new AffectationHashMap();
+        System.out.println("=== 3.b Ajout d'affectations et affichage ===");
+        affectations.ajouterEmployeDepartement(e1, d1);
+        affectations.ajouterEmployeDepartement(e2, d2);
+        affectations.ajouterEmployeDepartement(e3, d1);
+        affectations.ajouterEmployeDepartement(e4, d3);
+        affectations.afficherEmployesEtDepartements();
     }
 }
